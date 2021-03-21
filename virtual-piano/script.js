@@ -101,25 +101,14 @@ btn.addEventListener('click',() =>{
 
 
 //fullscreen
-function activateFullscreen(element) {
-    if(element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if(element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-    } else if(element.webkitRequestFullscreen) {
-        element.webkitRequestFullscreen();
-    } else if(element.msRequestFullscreen) {
-        element.msRequestFullscreen();
+document.querySelector('.fullscreen').addEventListener('click',toggleScreen);
+
+function toggleScreen (){
+    if(!document.fullscreenElement){
+        document.documentElement.requestFullscreen();
+    }else{
+        if(document.fullscreenEnabled){
+            document.exitFullscreen();
+        }
     }
 }
-
-// Whack fullscreen
-function deactivateFullscreen() {
-    if(document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if(document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-    } else if(document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-    }
-};
