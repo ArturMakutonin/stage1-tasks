@@ -16,47 +16,47 @@
   <title>virtual-piano</title>
 </head>
 
-<body>
+<body id="my-page">
   <header class="header">
     <h1 class="header-title">Virtual Piano</h1>
   </header>
   <main class="main">
     <div class="btn-container">
-      <button class="btn btn-notes btn-active">Notes</button>
-      <button class="btn btn-letters">Letters</button>
+      <button id="btn" class="btn btn-notes btn-active">Notes</button>
+      <button id="btn1" class="btn btn-letters">Letters</button>
     </div>
     <section>
       <div class="piano">
-        <div class="key piano-key" data-letter="D" data-note="c"></div>
-        <div class="key piano-key" data-letter="F" data-note="d"></div>
-        <div class="key piano-key" data-letter="G" data-note="e"></div>
-        <div class="key piano-key" data-letter="H" data-note="f"></div>
-        <div class="key piano-key" data-letter="J" data-note="g"></div>
-        <div class="key piano-key" data-letter="K" data-note="a"></div>
-        <div class="key piano-key" data-letter="L" data-note="b"></div>
-        <div class="keys-sharp">
-          <div class="key piano-key sharp" data-letter="R" data-note="c♯"></div>
-          <div class="key piano-key sharp" data-letter="T" data-note="d♯"></div>
+        <div id="change1" class="key piano-key" data-letter="D" data-note="c"></div>
+        <div id="change2" class="key piano-key" data-letter="F" data-note="d"></div>
+        <div id="change3" class="key piano-key" data-letter="G" data-note="e"></div>
+        <div id="change4" class="key piano-key" data-letter="H" data-note="f"></div>
+        <div id="change5" class="key piano-key" data-letter="J" data-note="g"></div>
+        <div id="change6" class="key piano-key" data-letter="K" data-note="a"></div>
+        <div id="change7" class="key piano-key" data-letter="L" data-note="b"></div>
+        <div  class="keys-sharp">
+          <div id="change8" class="key piano-key sharp" data-letter="R" data-note="c♯"></div>
+          <div id="change9" class="key piano-key sharp" data-letter="T" data-note="d♯"></div>
           <div class="key piano-key sharp none"></div>
-          <div class="key piano-key sharp" data-letter="U" data-note="f♯"></div>
-          <div class="key piano-key sharp" data-letter="I" data-note="g♯"></div>
-          <div class="key piano-key sharp" data-letter="O" data-note="a♯"></div>
+          <div id="change10" class="key piano-key sharp" data-letter="U" data-note="f♯"></div>
+          <div id="change11" class="key piano-key sharp" data-letter="I" data-note="g♯"></div>
+          <div id="change12" class="key piano-key sharp" data-letter="O" data-note="a♯"></div>
         </div>
       </div>
-      <audio id="a♯" data-letter="O" data-note="a♯" src="./assets/audio/a♯.mp3"></audio>
-      <audio id="g♯" data-letter="I" data-note="g♯" src="./assets/audio/g♯.mp3"></audio>
-      <audio id="f♯" data-letter="U" data-note="f♯" src="./assets/audio/f♯.mp3"></audio>
-      <audio id="d♯" data-letter="T" data-note="d♯" src="./assets/audio/d♯.mp3"></audio>
-      <audio id="c♯" data-letter="R" data-note="c♯" src="./assets/audio/c♯.mp3"></audio>
-      <audio id="b" data-letter="L" data-note="b" src="./assets/audio/b.mp3"></audio>
-      <audio id="a" data-letter="K" data-note="a" src="./assets/audio/a.mp3"></audio>
-      <audio id="g" data-letter="J" data-note="g" src="./assets/audio/g.mp3"></audio>
-      <audio id="f" data-letter="H" data-note="f" src="./assets/audio/f.mp3"></audio>
-      <audio id="e" data-letter="G" data-note="e" src="./assets/audio/e.mp3"></audio>
-      <audio id="d" data-letter="F" data-note="d" src="./assets/audio/d.mp3"></audio>
-      <audio id="c" data-letter="D" data-note="c" src="./assets/audio/c.mp3"></audio>
+      <audio data-key="79" id="a♯" data-letter="O" data-note="a♯" src="./assets/audio/a♯.mp3"></audio>
+      <audio data-key="73" id="g♯" data-letter="I" data-note="g♯" src="./assets/audio/g♯.mp3"></audio>
+      <audio data-key="85" id="f♯" data-letter="U" data-note="f♯" src="./assets/audio/f♯.mp3"></audio>
+      <audio data-key="84" id="d♯" data-letter="T" data-note="d♯" src="./assets/audio/d♯.mp3"></audio>
+      <audio data-key="82" id="c♯" data-letter="R" data-note="c♯" src="./assets/audio/c♯.mp3"></audio>
+      <audio data-key="76" id="b" data-letter="L" data-note="b" src="./assets/audio/b.mp3"></audio>
+      <audio data-key="75" id="a" data-letter="K" data-note="a" src="./assets/audio/a.mp3"></audio>
+      <audio data-key="74" id="g" data-letter="J" data-note="g" src="./assets/audio/g.mp3"></audio>
+      <audio data-key="72" id="f" data-letter="H" data-note="f" src="./assets/audio/f.mp3"></audio>
+      <audio data-key="71" id="e" data-letter="G" data-note="e" src="./assets/audio/e.mp3"></audio>
+      <audio data-key="70" id="d" data-letter="F" data-note="d" src="./assets/audio/d.mp3"></audio>
+      <audio data-key="68" id="c" data-letter="D" data-note="c" src="./assets/audio/c.mp3"></audio>
     </section>
-    <button class="fullscreen openfullscreen"></button>
+    <button onclick="activateFullscreen(document.getElementById('my-page'))" onclick="deactivateFullscreen()" class="fullscreen openfullscreen"></button>
   </main>
   <footer class="footer">
     <div class="footer-container">
